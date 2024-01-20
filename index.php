@@ -1,5 +1,6 @@
 <?php
     define("ROOT", "http://localhost/jonas-brüll.be");
+    //define("ROOT", "http://www.xn--jonas-brll-heb.be");
 
     function URL($index = null) {
         $url = explode("/", trim($_GET["url"] ?? "home", "/"));
