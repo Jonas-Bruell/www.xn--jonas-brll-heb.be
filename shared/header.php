@@ -5,8 +5,8 @@
     </div>
     <nav>
         <ul class="flex-center" style="list-style-type: none;">
-            <li><button onclick="location.href='index.php'"><a style="text-decoration: none;" href="index.php">Index</a></button></li>
-            <li><button onclick="location.href='over-mij.php'"><a style="text-decoration: none;" href="over-mij.php">Over mij</a></button></li>
+            <li><button onclick="location.href='<?=ROOT?>/home'"><a style="text-decoration: none;" href="<?=ROOT?>">Home</a></button></li>
+            <li><button onclick="location.href='<?=ROOT?>/over-mij'"><a style="text-decoration: none;" href="<?=ROOT?>/over-mij">Over mij</a></button></li>
         </ul>
     </nav>
 </header>

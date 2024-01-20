@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <?php include "shared/header.html";?>
+    <?php include "shared/header.php";?>
 
     <main>
         <!-- PROFILE CARD -->
