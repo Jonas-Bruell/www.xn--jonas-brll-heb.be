@@ -2,7 +2,7 @@
 <html lang="nl-be">
 <head>
 
-    <?php include "shared/head.html";?>
+    <?php include "elements/head.html";?>
 
     <meta name="keywords" content="cv, curriculum vitae, resume, Jonas, Brüll, Brull, Bruell">
     <meta name="description" content="My online resume">
@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <?php include "shared/header.php";?>
+    <?php include "elements/header.php";?>
 
     <main>
         <!-- LOREM IPSUM -->
@@ -92,7 +92,7 @@
         </section>
     </main>
 
-    <?php include "shared/footer.php";?>
+    <?php include "elements/footer.php";?>
 
 </body>
 </html>

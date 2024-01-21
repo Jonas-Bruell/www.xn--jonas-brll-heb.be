@@ -2,7 +2,7 @@
 <html lang="nl-be">
 <head>
 
-    <?php include "shared/head.html";?>
+    <?php include "elements/head.html";?>
 
     <meta name="keywords" content="cv, curriculum vitae, resume, Jonas, Brüll, Brull, Bruell, over mij, vaardigheden, profiel">
     <meta name="description" content="Meer over mij">
@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <?php include "shared/header.php";?>
+    <?php include "elements/header.php";?>
 
     <main>
         <!-- PROFILE CARD -->
@@ -33,7 +33,7 @@
                 foreach($array as $rating) {
                     $text=$rating[0];
                     $stars=$rating[1];
-                    include "shared/rating.php";
+                    include "elements/rating.php";
                 }
             }?>
             <section style="grid-area: 1/1/3/2;">
@@ -77,7 +77,7 @@
         </section>
     </main>
 
-    <?php include "shared/footer.php";?>
+    <?php include "elements/footer.php";?>
 
 </body>
 </html>
