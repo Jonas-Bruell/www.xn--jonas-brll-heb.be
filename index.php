@@ -7,7 +7,7 @@
         if (!is_numeric($index)) {
             return $url;
         } return $url[$index] ?? "";
-    } $file = URL(0) . ".php";
+    } $file = "pages/" . URL(0) . ".php";
 
     if (file_exists($file)) {
         require $file;
