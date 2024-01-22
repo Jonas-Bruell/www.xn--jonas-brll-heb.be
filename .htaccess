@@ -1,10 +1,11 @@
-# redirecting all urls to index.php
-
+Options +MultiViews
 Options -Indexes
 
 RewriteEngine On
 
+# ignore rewrite for files and dirs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^(.*)$ index.php?pretty-url=$1 [QSA]
+# redirecting all urls to index.php
+RewriteRule ^(.*)$ index.php?$1 [QSA]

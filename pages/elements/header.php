@@ -1,3 +1,12 @@
+<?php session_start(); 
+    function buttonLoginProfile() {
+        if (isset($_SESSION['session-username'])) {
+            echo '/profiel';
+        } else {
+            echo implode(array('/inloggen?redirect=', htmlspecialchars($_SERVER["REDIRECT_QUERY_STRING"] ?? "homepage")));
+        }
+    }
+?>
 <header class="flex-center" style="background-color: #ddd; justify-content: space-between; padding: 20px 50px; position: sticky; top: 0;">
     <div class="flex-center">
         <img style="height: 40px;" src="images/JB.svg">
@@ -10,7 +19,7 @@
             <li><a style="text-decoration: none;" href="<?=ROOT?>/over-mij"><button>Over mij</button></a></li>
         </ul>
         <div class="flex-center">
-            <button>Profiel</button>
+            <a href="<?=ROOT?><?php buttonLoginProfile();?>"><button>Profiel</button></a>
         </div>
     </nav>
 </header>
