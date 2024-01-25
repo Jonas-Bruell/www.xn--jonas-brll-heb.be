@@ -17,7 +17,7 @@
             </button>
         </div>
         <div style="grid-area: 1/2/3/3; display: flex; justify-content: left; align-items: center;">
-            <img style="width: 35vw;" src="<?=ROOT?>/images/peugeot-404.png">
+            <img style="width: 35vw;" src="<?=ROOT?>/img/peugeot-404.png">
         </div>
     </main>
 </body>
