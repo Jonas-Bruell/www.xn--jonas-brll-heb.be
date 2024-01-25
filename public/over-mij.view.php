@@ -2,7 +2,7 @@
 <html lang="nl-be">
 <head>
 
-    <?php include "elements/head.html";?>
+    <?php include "elements/head.php";?>
 
     <meta name="keywords" content="cv, curriculum vitae, resume, Jonas, Brüll, Brull, Bruell, over mij, vaardigheden, profiel">
     <meta name="description" content="Meer over mij">
@@ -71,6 +71,7 @@
                     array("Figma", 3),
                     array("MatLab", 2),
                     array("UML", 3),
+                    array("ER", 2),
                 );
                 makeRating($hulpmiddelen); ?>
             </section>

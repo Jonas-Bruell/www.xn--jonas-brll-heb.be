@@ -1,5 +1,5 @@
 <?php //session_start(); 
-include("database/interface.php");
+include("db/interface.php");
     function registerUser() {
         $username = filter_input(INPUT_POST, "register_username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "register_plain_password", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -29,14 +29,14 @@ include("database/interface.php");
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title> 
+    <title>Registreren</title> 
 
 </head>
 <body style="margin: 0; padding: 0;;">
 
     <form id="register-form" action="<?php echo htmlspecialchars($_SERVER["REQUEST_URI"]);?>" method="post">
         <fieldset style="margin: 10vw;">
-            <h3>register</h3>
+            <h3>Registreren</h3>
             <p>Al een account? <a href="inloggen">Meld je hier aan</a>!</p>
             <!-- username -->
             <label from="register-form" for="register-username">username: </label>

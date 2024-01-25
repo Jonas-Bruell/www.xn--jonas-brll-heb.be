@@ -3,9 +3,9 @@ Options -Indexes
 
 RewriteEngine On
 
-# ignore rewrite for files and dirs
+# ignore RewriteRule for files -> imagepaths
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-d
 
 # redirecting all urls to index.php
 RewriteRule ^(.*)$ index.php?$1 [QSA]

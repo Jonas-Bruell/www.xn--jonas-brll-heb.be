@@ -10,7 +10,7 @@ if (isset($_SESSION['username'])) {
 ?>
 
 <?php  //session_start(); 
-    include("database/interface.php");
+    include("db/interface.php");
     function loginUser() {
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -38,14 +38,14 @@ if (isset($_SESSION['username'])) {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title> 
+    <title>Inloggen</title> 
 
 </head>
 <body style="margin: 0; padding: 0;;">
 
     <form id="login-form" action="<?php echo htmlspecialchars($_SERVER["REQUEST_URI"]);?>" method="post">
         <fieldset style="margin: 10vw;">
-            <h3>login</h3>
+            <h3>Inloggen</h3>
             <p>Nieuw? <a href="registreren">Registreer je hier</a>!</p>
             <!-- username -->
             <label from="login-form" for="login-username">username: </label>

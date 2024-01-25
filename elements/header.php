@@ -9,7 +9,7 @@
 ?>
 <header class="flex-center" style="background-color: #ddd; justify-content: space-between; padding: 20px 50px; position: sticky; top: 0;">
     <div class="flex-center">
-        <img style="height: 40px;" src="images/JB.svg">
+        <img style="height: 40px;" src="<?=ROOT?>/images/JB.svg">
         <p style="margin-left: 30px; border-left: 1px solid black; padding-left: 30px; font-size: 40px; font-weight: bold; text-transform: uppercase;">Jonas Brüll</p>
     </div>
     <nav class="flex-center">

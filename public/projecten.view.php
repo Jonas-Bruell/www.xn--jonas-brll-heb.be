@@ -2,7 +2,7 @@
 <html lang="nl-be">
 <head>
 
-    <?php include "elements/head.html";?>
+    <?php include "elements/head.php";?>
 
     <meta name="keywords" content="cv, curriculum vitae, resume, Jonas, Brüll, Brull, Bruell">
     <meta name="description" content="My online resume">
@@ -12,6 +12,8 @@
 <body>
 
     <?php include "elements/header.php";?>
+
+    <a href="<?=ROOT?>/projecten/website">website</a>
 
     <main>
         <!-- MENU-SELECTOR -->
