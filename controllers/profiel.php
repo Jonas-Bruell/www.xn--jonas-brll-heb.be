@@ -8,7 +8,7 @@ part("head.php", [
 
 part("header.php");
 
-view("profiel.php");
+view("profiel.view.php");
     
 part("footer.php");
 

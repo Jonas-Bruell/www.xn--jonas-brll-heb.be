@@ -7,10 +7,11 @@ function dd($input) {
     die();
 }
 
-function view($path, $attributes = []) {
+function engine($path, $attributes = []) {
     extract($attributes);
-    require root("views/" . $path);
+    require root("engine/" . $path);
 }
+
 
 function part($path, $attributes = []) {
     extract($attributes);
@@ -22,9 +23,16 @@ function php($path, $attributes = []) {
     require root("php/" . $path);
 }
 
+function view($path, $attributes = []) {
+    extract($attributes);
+    require root("views/" . $path);
+}
+
+
+
 function abort($code = 404) {
     http_response_code($code);
-    require root("errors/{$code}.php");
+    view("errors/{$code}.php");
     die();
 }
 

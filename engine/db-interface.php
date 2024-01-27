@@ -1,4 +1,6 @@
-<?php include("config.php");
+<?php 
+
+require root("config.php");
 
 function openMySQLConnection() {
     global $db_server, $db_user, $db_password, $db_name;

@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php 
     function buttonLoginProfile() {
         if (isset($_SESSION['session-username'])) {
             echo '/profiel';
