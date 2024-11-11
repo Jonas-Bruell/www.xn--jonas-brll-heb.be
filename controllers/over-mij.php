@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 part("head.php", [
     "title" => "Over mij",
@@ -9,7 +9,7 @@ part("head.php", [
 part("header.php");
 
 view("over-mij.view.php");
-    
+
 part("footer.php");
 
 ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 engine("db-interface.php");
 

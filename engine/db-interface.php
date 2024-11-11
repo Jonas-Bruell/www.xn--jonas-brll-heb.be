@@ -1,8 +1,9 @@
-<?php 
+<?php
 
 require root("config.php");
-
-function openMySQLConnection() {
+//Database
+function openMySQLConnection()
+{
     global $db_server, $db_user, $db_password, $db_name;
     try {
         return mysqli_connect($db_server, $db_user, $db_password, $db_name);
@@ -11,7 +12,9 @@ function openMySQLConnection() {
     }
 }
 
-function validateInput($inputtype, $sanitized_input) {
+//Validator
+function validateInput($inputtype, $sanitized_input)
+{
     switch ($inputtype) {
         case "username":
             return preg_match("/^[a-zA-Z1-9_-]*$/", $sanitized_input); // only letters, numbers, hyphen, underscore allowed
@@ -20,7 +23,8 @@ function validateInput($inputtype, $sanitized_input) {
 
 }
 
-function createNewUser($username, $password) {
+function createNewUser($username, $password)
+{
     $connection = openMySQLConnection();
     $sql_query = "INSERT INTO Users (username, password) VALUES ('$username', '$password')";
     try {
@@ -33,15 +37,16 @@ function createNewUser($username, $password) {
 }
 
 ##########""
-function checkLoginCredentials($username, $password) {
+function checkLoginCredentials($username, $password)
+{
     $connection = openMySQLConnection();
     $sql_query = "SELECT username, password FROM Users WHERE username = '$username'";
     try {
         $user = mysqli_fetch_assoc(mysqli_query($connection, $sql_query));
         return password_verify($password, $user['password']);
     } catch (Exception $exeption) {
-            echo "could not find user";
-            return false;
+        echo "could not find user";
+        return false;
     } finally {
         mysqli_close($connection);
     }

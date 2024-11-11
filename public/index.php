@@ -1,5 +1,9 @@
 <?php
 
+use engine\App;
+use engine\Container;
+use engine\Database;
+use engine\Response;
 use engine\Router;
 
 session_start();
@@ -9,15 +13,24 @@ define("ROOT", "http://localhost/jonas-brüll.be/public");
 //define("ROOT", "http://www.xn--jonas-brll-heb.be");
 define("DOMAIN", "/jonas-br%c3%bcll.be/public");
 
-function root($path) { 
-    return BASE . "{$path}";
-}
+require BASE . "engine/globals.php";
 
-require root("engine/globals.php");
+engine('App');
+engine('Container');
+engine('Response');
+engine('Database');
+engine('Router');
 
-engine('Router.php');
+$container = new Container();
 
-$router = new Router();
+$container->bind('engine\Database', function () {
+    $config = require root('engine\config.php');
+    return new Database($config['database']);
+});
+App::setContainer($container);
+App::resolve(Database::class);
+
+$router = new Router([]);
 
 $router->get('/', 'controllers/homepage.php');
 
@@ -26,12 +39,12 @@ $router->get('/projecten/website', 'controllers/projecten/website.php');
 
 $router->get('/over-mij', 'controllers/over-mij.php');
 
-$router->get('/profiel', 'controllers/profiel.php');
+$router->get('/profiel', 'controllers/profiel.php')->only('auth');
 $router->get('/profiel/inloggen', 'controllers/profiel/inlogen.php');
-$router->get('/profiel/registreren', 'controllers/profiel/registreren.php');
+$router->get('/profiel/registreren', 'controllers/profiel/registreren.php')->only('guest');
 
 $uri = strtolower(parse_url($_SERVER['REQUEST_URI'])['path']);
-$method = isset($_POST['_method']) ? $_POST['_method'] : $_SERVER['REQUEST_METHOD'];
+$method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
 //dd($method);
 
@@ -45,11 +58,10 @@ die();
 //dd($router->routes);
 
 
-
 //$uri = strtolower(parse_url($_SERVER['REQUEST_URI'])['path']);
 
 
-$link = substr($uri , 28, strlen($uri));
+$link = substr($uri, 28, strlen($uri));
 $file = root("controllers/" . ($link === "" ? "homepage" : $link) . ".php");
 
 //var_dump($file);
@@ -59,7 +71,7 @@ $file = root("controllers/" . ($link === "" ? "homepage" : $link) . ".php");
 if (file_exists($file)) {
     require $file;
 } else {
-    abort();
+    abort(Response::NOT_FOUND);
 }
 
 

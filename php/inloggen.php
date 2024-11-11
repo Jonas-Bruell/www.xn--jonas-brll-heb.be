@@ -8,11 +8,12 @@ if (isset($_SESSION['username'])) {
 */
 ?>
 
-<?php  
+<?php
 
 //session_start(); 
 
-function loginUser() {
+function loginUser($username, #[SensitiveParameter] $password)
+{
     $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
     if (empty($username)) {

@@ -2,7 +2,8 @@
 
 //session_start(); 
 
-function registerUser() {
+function registerUser()
+{
     $username = filter_input(INPUT_POST, "register_username", FILTER_SANITIZE_SPECIAL_CHARS);
     $password = filter_input(INPUT_POST, "register_plain_password", FILTER_SANITIZE_SPECIAL_CHARS);
     if (empty($username)) {
