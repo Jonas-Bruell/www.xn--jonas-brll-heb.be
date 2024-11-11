@@ -1,0 +1,5 @@
+(1) Backend verder uitbouwen
+	- alle php/ naar engine/
+	- Router.php en controllers/ op elkaar afstemmen
+(2) Website mooier maken
+(3) Content op website zetten

@@ -4,8 +4,8 @@
 RewriteEngine On
 
 # ignore RewriteRule for files -> imagepaths
-#RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteCond %{REQUEST_FILENAME} !-d
 
 # redirecting all urls to index.php
-RewriteRule ^(.*)$ public/index.php?$1 [QSA]
+RewriteRule ^(.*)$ index.php?$1 [QSA]

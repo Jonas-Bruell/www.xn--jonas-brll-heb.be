@@ -2,20 +2,26 @@
 
 * {
     margin: 0;
+    border: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html {
+    width: 100%;
+    height: 100%;
     line-height: inherit;
     scroll-behavior: smooth;
     tab-size: 4;
 }
 
 body {
+    width: 100%;
+    height: 100%;
     background-color: var(--background-color);
 }
 
+/*
 main {
     margin: 0 5vw;
     padding: 5vw;
@@ -29,3 +35,4 @@ button:hover {
 button:active {
     box-shadow: inset 0 0 7px 2px rgba(0, 0, 0, 0.4);
 }
+*/
