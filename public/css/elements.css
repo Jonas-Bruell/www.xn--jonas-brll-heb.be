@@ -1,0 +1,121 @@
+/* CSS for custom HTML elements */
+
+
+/* HEADER BUTTON */
+
+header button {
+    background-color: red;
+    display: inline-block;
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* WELCOME */
+#welcome {
+    background-color: black;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    background-position: center left;
+    background-attachment: fixed;
+}
+
+/* BUTTON */
+button.large {
+    width: 250px;
+    height: 50px;
+    font-size: var(--text-large);
+}
+
+button.medium {
+    width: 200px;
+    height: 40px;
+    font-size: var(--text-medium);
+}
+
+button.small {
+    width: 150px;
+    height: 30px;
+    font-size: var(--text-small);
+}
+
+button.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+button.secondary {
+    background-color: white;
+    color: var(--primary-color);
+    border: solid var(--primary-color);
+}
+
+/* PROJECT TILE */
+.project-tile {
+    display: flex;
+    background-color: var(--tile-background);
+    margin: 5vw;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+
+}
+
+.project-tile h1 {
+    font-size: 30pt;
+    padding: 30px 0;
+}
+
+.project-tile img {
+    border-radius: 15px;
+}
+
+/* SKILL RATING */
+.skill-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18pt;
+}
+
+.star-primary {
+    color: black;
+    -webkit-text-stroke: 1px black;
+}
+
+.star-secondary {
+    /*color: rgba(0,0,0,0);*/
+    -webkit-text-stroke: 1px black;
+}
+
+/*
+.skill-rating:hover {
+    font-weight: 500;
+    color: #FFD700;
+}
+*/
+
+/* OTHER */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TESTING*/
+.test-bg-r {
+    background-color: red;
+}
+
+.test-bg-g {
+    background-color: green;
+}
+
+.test-bg-b {
+    background-color: blue;
+}
