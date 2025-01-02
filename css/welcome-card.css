@@ -48,20 +48,64 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    .welcome-card-section {
+        padding: 10vw 3vw;
+    }
+    .welcome-card{
+        flex-direction: column;
+    }
+    .welcome-card-photo{
+        height: 50%;
+    }
+    .welcome-card-intro{
+        width: 100%;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
+    .welcome-card-section {
+        padding: 10vw 3vw;
+    }
+    .welcome-card{
+        flex-direction: column;
+    }
+    .welcome-card-photo{
+        height: 50%;
+    }
+    .welcome-card-intro{
+        width: 100%;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
+    .welcome-card-section {
+        padding: 10vw 3vw;
+    }
+    .welcome-card{
+        flex-direction: column;
+    }
+    .welcome-card-photo{
+        height: 50%;
+    }
+    .welcome-card-intro{
+        width: 100%;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    .welcome-card-section {
+        padding: 10vw 3vw;
+    }
+    .welcome-card{
+        flex-direction: column;
+    }
+    .welcome-card-photo{
+        height: 50%;
+    }
+    .welcome-card-intro{
+        width: 100%;
+    }
 }
