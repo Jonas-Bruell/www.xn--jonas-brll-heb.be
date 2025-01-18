@@ -1,1 +1,20 @@
 /* CSS for custom HTML elements */
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  border-color: var(--text-color);
+  text-decoration: none;
+  border: 1px;
+  margin: 10px 0px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.logo-and-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

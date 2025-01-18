@@ -1,0 +1,117 @@
+/* CSS for the welcome card on the home screen */
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 3vw;
+    height: 90vh;
+    width: 94vw;
+    padding: 10%;
+    border-radius: 25px;
+    background-color: var(--tile-background-color);
+    box-shadow: 0 0 10px 3px var(--shadow-color);
+}
+
+#welcome-intro {
+
+}
+
+#welcome-intro-photo {
+    display: inherit;
+    flex-direction: inherit;
+    margin-left: auto;
+    margin-right: 0;
+    width: 45%;
+}
+
+#welcome-intro-photo img {
+    border-radius: 30%;
+}
+
+#welcome-intro-about {
+
+}
+
+#welcome-intro-about-name {
+    border: 1px;
+    border-style: none none solid;
+    border-color: var(--text-color);
+}
+
+#welcome-intro-about-links img {
+    width: 10vw;
+    height: auto;
+}
+
+#welcome-about {
+
+}
+
+@media only screen and (orientation: portrait) and (min-width: 320px) {
+    body { /*temp*/
+        background-color: red;
+    }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 480px) {
+    body { /*temp*/
+        background-color: green;
+    }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+    body { /*temp*/
+        background-color: blue;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 768px) {
+    body { /*temp*/
+        background-color: indigo;
+    }
+
+    #welcome {
+        padding: 5%;
+    }
+
+    #welcome-intro {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #welcome-intro-photo {
+        margin-left: 0;
+        margin-right: auto;
+        width: 35vh;
+        height: 35vh;
+    }
+
+    #welcome-intro-about {
+        margin-top: auto;
+        margin-bottom: 0;
+        width: 60%;
+    }
+
+    #welcome-intro-about-links img {
+        width: 5vw;
+        height: auto;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1024px) {
+    body { /*temp*/
+        background-color: yellow;
+    }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 1080px) {
+    body { /*temp*/
+        background-color: orange;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1200px) {
+    body { /*temp*/
+        background-color: purple;
+    }
+}

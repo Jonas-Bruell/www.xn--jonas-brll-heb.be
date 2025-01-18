@@ -4,40 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/elements.css">
-    <link rel="stylesheet" href="css/welcome-card.css">
+    <link rel="stylesheet" href="css/welcome.css">
+
+    <script src="js/index.js"></script>
+    <script src="js/welcome.js"></script>
     
-    <title>Document</title>
+    <title>Jonas Brüll</title>
 </head>
 <body>
     
-    <section class="welcome-card-section">
-        <div class="welcome-card">
-            
-            <div class="welcome-card-photo">
+    <section id="welcome">
+        <div id="welcome-intro">
                 
-                <img src="img/Profielfoto.jpg" alt="Profielfoto van Jonas Brüll">
+            <picture id="welcome-intro-photo">
+                <source media="(max-width: 480px)" srcset="img/profielfoto/160x160.jpg">
+                <img src="img/profielfoto/320x320.jpg" alt="Profielfoto van Jonas Brüll">
+            </picture>
+            
+            <div id="welcome-intro-about">
                 
+                <div id="welcome-intro-about-name">
+                    <h1>Jonas Brüll</h1>
+                </div>
+
+                <div id="welcome-intro-about-links">
+                    
+                    <a class="primary-button logo-and-text" href="https://github.com/Jonas-Bruell" target="_blank">
+                        
+                        <picture>
+                            <img src="img/favicons/github.svg" alt="Github Logo">
+                        </picture>
+
+                        <h2>Github</h2>
+                    
+                        <p>></p>
+                    
+                    </a>
+
+                    <a class="primary-button logo-and-text" href="mailto:contacteer-me@jonas.brüll.be" target="_blank">
+
+                        <picture>
+                            <img src="img/favicons/email.svg" alt="Email Logo">
+                        </picture>
+
+                        <h2>Email</h2>
+
+                        <p>></p>
+                    </a>
+                    
+                </div>
             </div>
-
-            <div class="welcome-card-intro">
-
-                <h1>Jonas Brüll</h1>
-                <p>Ik ben een 20 jaar oude student computerwetenschappen aan de VUB. Ik werk al heel mijn leven graag
-                    met computers - heb er op mijn 15e zelf een in elkaar gestoken - en ben van nature uit nieuwsgierig
-                    naar hoe de wereld in elkaar zit.</p>
-
-            </div>
-            
-            
-            
 
         </div>
+
+        <div id="welcome-about">
+            <p>Ik ben een 20 jaar oude student computerwetenschappen aan de VUB. Ik werk al heel mijn leven graag
+                met computers - heb er op mijn 15e zelf een in elkaar gestoken - en ben van nature uit nieuwsgierig
+                naar hoe de wereld in elkaar zit.</p>
+        </div>
+
+        <div>
+            <button id="auto-mode-toggle" type="button" onclick="toggleAutoMode()">Auto</button>
+            <button id="light-mode-toggle" type="button" onclick="toggleLightMode()">Light</button>
+            <button id="dark-mode-toggle" type="button" onclick="toggleDarkMode()">Dark</button>
+            
+        </div>
+
     </section>
-
-
 
 </body>
 </html>
