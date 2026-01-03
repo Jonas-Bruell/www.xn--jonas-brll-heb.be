@@ -2,16 +2,12 @@
 
 :root {
     color-scheme: light dark;
-    --background-color: light-dark(white, black);
-    --tile-background-color: light-dark(rgba(0,0,0,.1), rgba(255,255,255,.075));
+    --tile-background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.075));
     --shadow-color: light-dark(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.2));
-    --blur-color: light-dark(red, red);
-    --text-color: light-dark(black, white);
 
     --github-logo-color: light-dark(#24292f, #fff);
 
-
-    --primary-color: light-dark(rgb(136, 4, 136), rgb(78, 24, 78));
+    --primary-color: light-dark(rgb(94, 24, 94), rgb(136, 4, 136));
     --secondary-color: green;
 
     --text-large: 21px;
@@ -29,21 +25,50 @@
 }
 
 html {
+    tab-size: 4;
     line-height: inherit;
     scroll-behavior: smooth;
-    tab-size: 4;
 }
 
 body {
+    --padding-top-bottom: 75px;
+    --padding-left-right: min(5dvw, 100px);
+    --border-radius: 25px;
+
+    overflow: auto;
     margin: auto;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--background-color);
-    color: var(--text-color)
+    padding: var(--padding-top-bottom) var(--padding-left-right);
+    width: min(100dvw, 1900px);
+    height: auto;
 }
 
-@media only screen and (orientation: landscape) and (min-width: 1920px) {
-    body {
-        width: 1920px;
-    }
+#page-wrapper {
+    padding: 5px;
+    min-height: calc(100dvh - 2*var(--padding-top-bottom));
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 50px 35px var(--shadow-color);
+    background-color: var(--tile-background-color);
+}
+
+header {
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    background-color: var(--tile-background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav {
+
+}
+
+main {
+    padding: 15px 30px;
+}
+
+footer {
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    background-color: var(--tile-background-color);
 }
